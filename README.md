@@ -38,6 +38,6 @@ A Web Rádio Saturno faz parte do **Ecossistema Saturno**, um universo de projet
 
 ## Licença
 
-O código deste repositório está licenciado sob a licença MIT | **[Leia o documento](./LICENSE.md)**.
+O código deste repositório está licenciado sob a licença MIT | **[Leia o documento](./LICENSE)**.
 
 A identidade visual, logotipos e demais elementos da marca Web Rádio Saturno podem possuir termos de uso próprios.
