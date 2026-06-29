@@ -1,13 +1,13 @@
 # Web Rádio Saturno
 
-![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento-E67817)
+![Status](https://img.shields.io/badge/Status-Ativa-E67817)
 ![Licença](https://img.shields.io/badge/Município-Itaboraí-291F75)
 
 > **Uma frequência além do comum.**
 
 ---
 
-A **Web Rádio Saturno** é uma futura web rádio brasileira dedicada à comunicação, educação, podcasts e conteúdos de interesse público, criada como parte do **Ecossistema Saturno**.
+A **Web Rádio Saturno** é uma web rádio brasileira dedicada à comunicação, educação, podcasts e conteúdos de interesse público, criada como parte do **Ecossistema Saturno**.
 
 Nosso objetivo é construir uma plataforma moderna e acessível, capaz de reunir programas, notícias, projetos especiais e conteúdos originais em uma única frequência.
 
