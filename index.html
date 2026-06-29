@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Rádio Saturno</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Rádio Saturno">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="apple-touch-icon" href="componentes/img/icon.ico">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="componentes/css/index.css">
+    <link rel="shortcut icon" href="componentes/img/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -50,18 +51,22 @@
     <main class="main-layout">
         <div class="left-column">
             
+            <div id="plantao-container" class="glass-card plantao-card">
+                <div class="card-header">
+                    <span><i class="fa-solid fa-triangle-exclamation"></i> NOTÍCIA EXTRAORDINÁRIA</span>
+                </div>
+                <div id="plantao-body" class="card-body"></div>
+            </div>
+
             <div class="glass-card">
                 <div class="card-header">
                     <span><i class="fa-solid fa-newspaper"></i> Notícias</span>
                 </div>
-                <div class="card-body">
+                <div id="news-container" class="card-body">
                     <div class="skeleton-wrapper">
                         <div class="skeleton-block title"></div>
                         <div class="skeleton-block"></div>
                         <div class="skeleton-block" style="width: 90%;"></div>
-                    </div>
-                    <div class="empty-state" style="display: none;">
-                        Sem notícias disponíveis.
                     </div>
                 </div>
             </div>
@@ -71,9 +76,7 @@
                     <span><i class="fa-solid fa-box-open"></i> Conteúdo Adicional</span>
                 </div>
                 <div class="card-body">
-                    <div class="empty-state">
-                        Carregando...
-                    </div>
+                    <div class="empty-state">Sem conteúdos adicionais disponíveis.</div>
                 </div>
             </div>
 
@@ -91,14 +94,9 @@
                     </div>
                     
                     <div class="audio-wrapper">
-                        <audio controls>
+                        <audio id="radio-player" controls>
                             <source src="SUA_URL_AQUI" type="audio/mpeg">
                         </audio>
-                    </div>
-
-                    <div class="skeleton-wrapper" style="padding: 0;">
-                        <div class="skeleton-block" style="width: 60%; margin-bottom: 5px;"></div>
-                        <div class="skeleton-block" style="width: 40%;"></div>
                     </div>
                 </div>
             </div>
@@ -107,15 +105,10 @@
                 <div class="card-header">
                     <span><i class="fa-solid fa-calendar-days"></i> Programação</span>
                 </div>
-                <div class="card-body">
+                <div id="prog-container" class="card-body">
                     <div class="skeleton-wrapper">
                         <div class="skeleton-block" style="width: 40%; height: 16px;"></div>
                         <div class="skeleton-block" style="width: 85%;"></div>
-                        <div class="skeleton-block" style="width: 50%; margin-top: 10px; height: 16px;"></div>
-                        <div class="skeleton-block" style="width: 75%;"></div>
-                    </div>
-                    <div class="empty-state" style="display: none;">
-                        Sem programação disponível.
                     </div>
                 </div>
             </div>
@@ -126,7 +119,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-info">
-                &copy; 2026 Web Rádio Saturno. Todos os direitos reservados.
+                &copy; 2026-<span id="copyright-year"><script>document.write(new Date().getFullYear());</script></span> Web Rádio Saturno. Todos os direitos reservados.
             </div>
             <div class="footer-links">
                 <a href="/sobre">Sobre</a>
