@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações - Web Rádio Saturno</title>
+    <meta name="description" content="Web Rádio Saturno: uma frequência além do comum. Ouça ao vivo, veja a programação e fique por dentro das notícias.">
+    <meta property="og:title" content="Doações - Web Rádio Saturno">
+    <meta property="og:description" content="Uma frequência além do comum. Ouça nossa programação ao vivo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webradiosaturno.pages.dev/doacao">
+    <meta property="og:image" content="https://webradiosaturno.pages.dev/componentes/img/icon.ico">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Doações - Web Rádio Saturno">
+    <meta name="twitter:description" content="Uma frequência além do comum. Ouça ao vivo.">
+    <link rel="canonical" href="https://webradiosaturno.pages.dev/doacao">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Rádio Saturno">
+    <link rel="apple-touch-icon" href="componentes/img/icon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="componentes/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="componentes/css/doacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="utm-blocker">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h2>Acesso Restrito</h2>
+        <p>Esta página não pode ser acessada com parâmetros de rastreamento externos.</p>
+        <p style="font-size:14px; opacity:0.7; margin-top:10px;">Remova os parâmetros <code>?utm_source=</code> da URL e tente novamente.</p>
+    </div>
+
+    <div id="offline-banner">
+        <i class="fa-solid fa-cloud-bolt"></i> Você está offline. Alguns recursos podem estar indisponíveis.
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo"></div>
+                <div class="slogan">Uma frequência além do comum.</div>
+            </div>
+            <div class="header-actions">
+                <a href="/criar-conta" class="header-btn" id="btn-criar-conta"><i class="fa-solid fa-user-plus"></i> CRIAR CONTA</a>
+                <a href="/entrar" class="header-btn" id="btn-entrar"><i class="fa-regular fa-circle-user"></i> ENTRAR</a>
+                <button class="header-btn" id="theme-toggle" aria-label="Alternar Tema">
+                    <i class="fa-solid fa-circle-half-stroke"></i> ALTERNAR TEMA
+                </button>
+                <button class="menu-toggle-btn" id="menu-toggle" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav-menu">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Início</a>
+            <a href="/programacao" class="nav-link">Programação</a>
+            <a href="/noticias" class="nav-link">Notícias</a>
+            <a href="/contato" class="nav-link">Contato</a>
+        </div>
+    </nav>
+
+    <main class="main-layout">
+        <div class="glass-card">
+            <div class="card-header">
+                <span><i class="fa-solid fa-heart" style="color: var(--live-bg);"></i> Ajude a Web Rádio Saturno</span>
+                <span style="font-size:11px; opacity:0.7;"><i class="fa-regular fa-hand-heart"></i> Sua contribuição é essencial!</span>
+            </div>
+            <div class="card-body">
+
+                <div class="section-title">
+                    <i class="fa-regular fa-circle-question"></i> Por que doar?
+                </div>
+                <div class="motivo-texto">
+                    <p>Estamos enfrentando um problema técnico há meses. O telefone pessoal de um funcionário apresenta múltiplas falhas durante o carregamento. Elas incluem o fato de o aparelho conectar e desconectar freneticamente sozinho, não aceitando mais a carga da forma original.</p>
+                    <p>Com sua ajuda, faremos a troca da bateria e do conector de carga, deixando o aparelho 100% pronto para o uso do dia a dia!</p>
+                    <p><i class="fa-solid fa-hand-holding-heart" style="color: var(--live-bg);"></i> <strong>Qualquer valor ou contribuição é bem-vinda. Muito obrigado(a)!</strong></p>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="section-title">
+                    <i class="fa-brands fa-pix"></i> Doação via Pix
+                </div>
+                <div class="pix-area">
+                    <div class="pix-chave">
+                        <i class="fa-brands fa-pix"></i> Chave Pix: <strong>contato.webradiosaturno@gmail.com</strong>
+                    </div>
+
+                    <button class="btn-doacao" id="btn-copiar-pix">
+                        <i class="fa-regular fa-copy"></i> Copiar chave Pix
+                    </button>
+
+                    <div class="qrcode-toggle">
+                        <input type="checkbox" id="toggle-qrcode">
+                        <i class="fa-solid fa-qrcode"></i> Exibir código QR
+                    </div>
+
+                    <div id="qrcode-container" class="qrcode-container">
+                        <img src="componentes/img/qr.jpeg" alt="QR Code Pix" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <p style="text-align:center; font-size:12px; margin-top:8px; color:#555;">Escaneie com o app do seu banco.</p>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <p style="text-align:center; font-size:12px; opacity:0.6; margin:0;">
+                    <i class="fa-solid fa-lock"></i> Transação segura via Pix — seus dados estão protegidos.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 style="margin:0 0 8px; font-size:18px; color:#FFF;">Web Rádio Saturno</h3>
+                <i>“Uma frequência além do comum.”</i>
+                <p><i class="fa-regular fa-envelope"></i> contato.webradiosaturno@gmail.com</p>
+                <div class="footer-social" style="margin-top:10px;">
+                    <a href="https://instagram.com/webradiosaturno" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@wrsaturno" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 style="margin:0 0 8px; color:#FFF;">Institucional</h4>
+                <a href="/sobre">Sobre</a>
+                <a href="/termos">Termos de Uso</a>
+                <a href="/privacidade">Privacidade</a>
+                <a href="/doacao">Doação</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="margin:0 0 8px; color:#FFF;">Ajuda</h4>
+                <a href="/faqs">FAQs</a>
+                <a href="/suporte">Suporte</a>
+                <a href="/programacao">Programação</a>
+                <a href="/contato">Contato</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025-<span id="copyright-year">2026</span> Web Rádio Saturno. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="componentes/js/doacao.js"></script>
+</body>
+</html>
