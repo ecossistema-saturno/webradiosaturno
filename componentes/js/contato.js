@@ -79,7 +79,7 @@
                 statusEl.className = 'form-status';
 
                 setTimeout(function() {
-                    statusEl.textContent = '✅ Mensagem enviada com sucesso! Em breve responderemos.';
+                    statusEl.textContent = 'Mensagem enviada com sucesso! Em breve responderemos.';
                     statusEl.className = 'form-status success';
                     form.reset();
                 }, 1200);
@@ -95,12 +95,12 @@
                 })
                 .then(function(res) {
                     if (!res.ok) throw new Error('Erro no servidor');
-                    statusEl.textContent = '✅ Mensagem enviada com sucesso!';
+                    statusEl.textContent = 'Mensagem enviada com sucesso!';
                     statusEl.className = 'form-status success';
                     form.reset();
                 })
                 .catch(function(err) {
-                    statusEl.textContent = '❌ Erro ao enviar. Tente novamente mais tarde.';
+                    statusEl.textContent = 'Erro ao enviar. Tente novamente mais tarde.';
                     statusEl.className = 'form-status error';
                     console.error(err);
                 });
