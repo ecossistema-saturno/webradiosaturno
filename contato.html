@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Web Rádio Saturno</title>
+    <meta name="description" content="Web Rádio Saturno: uma frequência além do comum. Ouça ao vivo, veja a programação e fique por dentro das notícias.">
+    <meta property="og:title" content="Contato - Web Rádio Saturno">
+    <meta property="og:description" content="Uma frequência além do comum. Ouça nossa programação ao vivo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webradiosaturno.pages.dev/contato">
+    <meta property="og:image" content="https://webradiosaturno.pages.dev/componentes/img/icon.ico">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contato - Web Rádio Saturno">
+    <meta name="twitter:description" content="Uma frequência além do comum. Ouça ao vivo.">
+    <link rel="canonical" href="https://webradiosaturno.pages.dev/contato">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Web Rádio Saturno">
+    <link rel="apple-touch-icon" href="componentes/img/icon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="componentes/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="componentes/css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="utm-blocker">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h2>Acesso Restrito</h2>
+        <p>Esta página não pode ser acessada com parâmetros de rastreamento externos.</p>
+        <p style="font-size:14px; opacity:0.7; margin-top:10px;">Remova os parâmetros <code>?utm_source=</code> da URL e tente novamente.</p>
+    </div>
+
+    <div id="offline-banner">
+        <i class="fa-solid fa-cloud-bolt"></i> Você está offline. Alguns recursos podem estar indisponíveis.
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo"></div>
+                <div class="slogan">Uma frequência além do comum.</div>
+            </div>
+            <div class="header-actions">
+                <a href="/criar-conta" class="header-btn" id="btn-criar-conta"><i class="fa-solid fa-user-plus"></i> CRIAR CONTA</a>
+                <a href="/entrar" class="header-btn" id="btn-entrar"><i class="fa-regular fa-circle-user"></i> ENTRAR</a>
+                <button class="header-btn" id="theme-toggle" aria-label="Alternar Tema">
+                    <i class="fa-solid fa-circle-half-stroke"></i> ALTERNAR TEMA
+                </button>
+                <button class="menu-toggle-btn" id="menu-toggle" aria-label="Abrir Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav-menu">
+        <div class="nav-container">
+            <a href="/" class="nav-link">Início</a>
+            <a href="/programacao" class="nav-link">Programação</a>
+            <a href="/noticias" class="nav-link">Notícias</a>
+            <a href="/contato" class="nav-link">Contato</a>
+        </div>
+    </nav>
+
+    <main class="main-layout">
+        <div class="glass-card">
+            <div class="card-header">
+                <span><i class="fa-regular fa-message"></i> Fale Conosco</span>
+            </div>
+            <div class="card-body">
+                <div class="contato-grid">
+                    <div class="contato-info">
+                        <h3 style="margin-top:0; display:flex; align-items:center; gap:8px;">
+                            <i class="fa-solid fa-headset" style="color:var(--live-bg);"></i> 
+                            Nossos canais
+                        </h3>
+                        <p><i class="fa-regular fa-envelope"></i>E-mail: contato.webradiosaturno@gmail.com</p>
+                        <p><i class="fa-regular fa-clock"></i> Atendimento: 13:00 até 22:00</p>
+                        <p><i class="fa-regular fa-comment"></i> Resposta média: 2 horas</p>
+                        <hr style="border:0; border-top:1px solid var(--border-color); margin:16px 0;" />
+                    </div>
+
+                    <div class="contato-form">
+                        <form id="contato-form" novalidate>
+                            <div class="form-group">
+                                <label for="contato-nome"><i class="fa-regular fa-user"></i> Seu nome</label>
+                                <input type="text" id="contato-nome" placeholder="Digite seu nome aqui" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contato-email"><i class="fa-solid fa-envelope"></i> E-mail</label>
+                                <input type="email" id="contato-email" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contato-assunto"><i class="fa-solid fa-tag"></i> Assunto</label>
+                                <select id="contato-assunto">
+                                    <option value="duvida">Dúvida</option>
+                                    <option value="sugestao">Sugestão</option>
+                                    <option value="critica">Crítica</option>
+                                    <option value="parceria">Parceria</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contato-mensagem"><i class="fa-regular fa-comment"></i> Mensagem</label>
+                                <textarea id="contato-mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                            </div>
+                            <button type="submit"><i class="fa-regular fa-paper-plane"></i> Enviar mensagem</button>
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 style="margin:0 0 8px; font-size:18px; color:#FFF;">Web Rádio Saturno</h3>
+                <i>“Uma frequência além do comum.”</i>
+                <p><i class="fa-regular fa-envelope"></i> contato.webradiosaturno@gmail.com</p>
+                <div class="footer-social" style="margin-top:10px;">
+                    <a href="https://instagram.com/webradiosaturno" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@wrsaturno" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 style="margin:0 0 8px; color:#FFF;">Institucional</h4>
+                <a href="/sobre">Sobre</a>
+                <a href="/termos">Termos de Uso</a>
+                <a href="/privacidade">Privacidade</a>
+                <a href="/doacao">Doação</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="margin:0 0 8px; color:#FFF;">Ajuda</h4>
+                <a href="/faqs">FAQs</a>
+                <a href="/suporte">Suporte</a>
+                <a href="/programacao">Programação</a>
+                <a href="/contato">Contato</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025-<span id="copyright-year">2026</span> Web Rádio Saturno. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="componentes/js/contato.js"></script>
+</body>
+</html>
