@@ -1,4 +1,4 @@
-const CACHE_NAME = 'radio-saturno-v1';
+const CACHE_NAME = 'wrsaturno-scache-v2';
 const ASSETS = [
   '/',
   '/index.html',
