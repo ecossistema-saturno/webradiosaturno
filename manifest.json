@@ -1,32 +1,30 @@
 {
-  "short_name": "Web Rádio Saturno",
+  "short_name": "Saturno",
   "name": "Web Rádio Saturno",
   "description": "Uma frequência além do comum.",
   "icons": [
     {
       "src": "componentes/img/icon192.png",
-      "type": "image/x-icon",
+      "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "componentes/img/icon512.png",
-      "type": "image/x-icon",
+      "type": "png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/index.html?pwa_version=2.0",
   "background_color": "#EEEEEE",
   "theme_color": "#1F1F1F",
   "display": "standalone",
   "orientation": "portrait",
   "categories": [
-    "entretenimento",
-    "noticia",
-    "variedades",
-    "musica",
-    "itaborai"
+    "entertainment",
+    "news",
+    "music"
   ],
   "lang": "pt-BR"
 }
