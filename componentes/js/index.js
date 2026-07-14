@@ -86,14 +86,14 @@
                     headers: { 'apikey': SUPABASE_KEY }
                 })
                 .then(function(response) {
-                    if (!response.ok) throw new Error('Erro ao buscar plantão');
+                    if (!response.ok) throw new Error('Erro ao buscar notícia extraordinária');
                     return response.json();
                 })
                 .then(function(data) {
                     return data[0] || null;
                 })
                 .catch(function(e) {
-                    console.warn('Erro ao carregar plantão:', e);
+                    console.warn('Erro ao carregar notícia extraordinária:', e);
                     return null;
                 });
             }
@@ -199,7 +199,7 @@
                     body: JSON.stringify({ email: email })
                 })
                 .then(function() {
-                    newsletterStatus.textContent = 'Inscrição realizada com sucesso! 📬';
+                    newsletterStatus.textContent = 'Inscrição realizada com sucesso!';
                     newsletterStatus.className = 'newsletter-status success';
                     newsletterEmail.value = '';
                 })
